@@ -1,0 +1,16 @@
+python train.py --do-train --do-train --eval-every 200 --run-name baseline 
+--finetune-path "PATH to model trained on in domain" --train_dir 'datasets/oodomain_train'
+--train-datasets "duorc,duorc_backtranslate_da,duorc_backtranslate_de,
+duorc_backtranslate_es,duorc_backtranslate_fr,duorc_backtranslate_it,
+duorc_backtranslate_nl,duorc_backtranslate_no,duorc_backtranslate_pt,
+duorc_backtranslate_ru,duorc_backtranslate_sv,race,
+race_backtranslate_da,race_backtranslate_de,race_backtranslate_es,
+race_backtranslate_fr,race_backtranslate_it,race_backtranslate_nl,
+race_backtranslate_no,race_backtranslate_pt,race_backtranslate_ru,
+race_backtranslate_sv, relation_extraction,
+relation_extraction_backtranslate_da,relation_extraction_backtranslate_de,
+relation_extraction_backtranslate_es,relation_extraction_backtranslate_fr,
+relation_extraction_backtranslate_it,relation_extraction_backtranslate_nl,
+relation_extraction_backtranslate_no,relation_extraction_backtranslate_pt,
+relation_extraction_backtranslate_ru,relation_extraction_backtranslate_sv
+"
