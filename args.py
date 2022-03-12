@@ -1,13 +1,14 @@
 import argparse
 
 
-def get_train_test_args():
+def get_train_test_args(args=None):
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--num-epochs", type=int, default=10)
     parser.add_argument("--lr", type=float, default=3e-5)
     parser.add_argument("--num-visuals", type=int, default=10)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--finetune-path", type=str, default=None)
     parser.add_argument("--save-dir", type=str, default="save/")
     parser.add_argument("--train", action="store_true")
     parser.add_argument("--eval", action="store_true")
@@ -27,5 +28,5 @@ def get_train_test_args():
     parser.add_argument("--sub-file", type=str, default="")
     parser.add_argument("--visualize-predictions", action="store_true")
     parser.add_argument("--eval-every", type=int, default=5000)
-    args = parser.parse_args()
+    args = parser.parse_args() if args is None else parser.parse_args(args=args)
     return args
